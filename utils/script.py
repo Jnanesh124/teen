@@ -21,7 +21,7 @@ Get connected channels list with - /connections"""
     ABOUT = """Powered By @ROCKERSBACKUP 
 
 ✯ Mʏ Nᴀᴍᴇ:  {}
-✯ Cʀᴇᴀᴛᴏʀ: <a href='tg://user?id=1883570185'>Jnanesh gowda</a>
+✯ Cʀᴇᴀᴛᴏʀ: <a href='tg://user?id=5047601096'>Jnanesh gowda</a>
 ✯ Lᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org'>Pʏᴛʜᴏɴ 3</a>
 ✯ DᴀᴛᴀBᴀsᴇ: <a href='https://cloud.mongodb.com/'>MᴏɴɢᴏDB</a>
 ✯ Bᴏᴛ Sᴇʀᴠᴇʀ: : <a href='https://heroku.com'>Heroku</a>"""
