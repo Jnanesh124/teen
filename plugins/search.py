@@ -71,7 +71,6 @@ async def recheck(bot, update):
        await update.message.edit(text=head+results, disable_web_page_preview=True)
     except Exception as e:
        await update.message.edit(f"❌ Error: `{e}`")
-        await m.delete(40)
 
 
 @Client.on_callback_query(filters.regex(r"^request"))
