@@ -28,10 +28,11 @@ async def search(bot, message):
                results += f"<b>👉 {name}\n🔎 {msg.link}</b>\n\n"                                                      
        if bool(results)==False:
           movies = await search_imdb(query)
-          for movie in movies:    
+          for movie in movies:
+           buttons = []
               buttons.append([InlineKeyboardButton("🔎 Ur Movie File Added Here🔍", url=f"https://t.me/+5TJUbOMCqD05ZmQ1")])
           msg = await message.reply_photo(photo="https://graph.org/file/74a0a6356b0868dab0aaf.jpg",
-                                          caption="<b>𝐌𝐫 #𝐦𝐞𝐧𝐭𝐢𝐨𝐧 𝐔𝐫 𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐌𝐨𝐯𝐢𝐞 💻\n\n👀 𝐎𝐧𝐥𝐢𝐧𝐞 𝐒𝐭𝐫𝐞𝐚𝐦𝐢𝐧𝐠 𝐋𝐢𝐧𝐤 𝐍𝐨𝐭 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐫𝐞𝐢𝐠𝐡𝐭 𝐤𝐧𝐨𝐰\n\n𝐆𝐞𝐭 𝐃𝐢𝐫𝐞𝐜𝐭 𝐔𝐫 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞📁 𝐈𝐧 𝐁𝐞𝐥𝐨𝐰 𝐆𝐫𝐨𝐮𝐩\n</b>", 
+                                          caption="<b>𝐌𝐫 #𝐦𝐞𝐧𝐭𝐢𝐨𝐧 𝐔𝐫 𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐌𝐨𝐯𝐢𝐞 \n\n👀 𝐎𝐧𝐥𝐢𝐧𝐞 𝐒𝐭𝐫𝐞𝐚𝐦𝐢𝐧𝐠 𝐋𝐢𝐧𝐤 𝐍𝐨𝐭 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐫𝐞𝐢𝐠𝐡𝐭 𝐤𝐧𝐨𝐰🥺\n\nSo 𝐆𝐞𝐭 𝐃𝐢𝐫𝐞𝐜𝐭 𝐔𝐫 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞📁 𝐈𝐧 𝐁𝐞𝐥𝐨𝐰 𝐆𝐫𝐨𝐮𝐩\n</b>", 
                                           reply_markup=InlineKeyboardMarkup([InlineKeyboardButton(buttons)]))
        else:
           msg = await message.reply_text(text=head+results, disable_web_page_preview=True)
