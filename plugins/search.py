@@ -36,9 +36,8 @@ async def search(bot, message):
                                           reply_markup=InlineKeyboardMarkup(buttons))
        else:
           msg = await message.reply_text(text=head+results, disable_web_page_preview=True)
-       _time = (int(time()) + (15*60))
+       _time = (int(time()) + (30))
        await save_dlt_message(msg, _time)
-       await msg.delete(30)
     except:
        pass
        
