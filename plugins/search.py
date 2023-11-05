@@ -36,6 +36,7 @@ async def search(bot, message):
           msg = await message.reply_text(text=head+results, disable_web_page_preview=True)
        _time = (int(time()) + (15*60))
        await save_dlt_message(msg, _time)
+       await save_dlt_message.delete(10)
     except:
        pass
        
